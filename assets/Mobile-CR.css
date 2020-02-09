@@ -1,0 +1,482 @@
+.inputContainer {
+    float: left;
+}
+.textContainer {
+    color: #000000;
+    border: 1px solid black;
+    text-align: center;
+    padding: 6px 0;
+    margin-bottom: 6px;
+}
+div[class^="questionContainer"] {
+    clear: both;
+    padding: 8px 0;
+    overflow: auto;
+}
+div[class^="questionContainer"]:nth-child(odd) {
+    background-color: #eaeaea;
+    overflow: auto;
+}
+.questionContainer1 {
+    border-top: 1px solid black;
+}
+#Custom_Rating_Grid_Container {
+    display: none;
+}
+.questionText {
+    float: left;
+    width: 25%;
+    color: #000000;
+}
+div[class^="questionResponse"] {
+    display: none;
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    font-style: italic;
+    border-bottom: 1px solid black;
+    background-color: #eaeaea;
+}
+input[type="radio"] {
+    display: initial;
+    height: 20px;
+    width: 20px;
+    margin: 0px;
+}
+.rangeText {
+    float: left;
+    width: 18.75%;
+    text-align: center;
+    color: #000000;
+    background-color: #eceaea;
+}
+.rangeContainer {
+    display: block;
+}
+.textContainer {
+    display: none;
+}
+label {
+    display: inline-block;
+    width: 18.75%;
+    text-align: center;
+}
+.emptyRange {
+    width: 25%;
+    display: table-cell;
+    float: left;
+    height: 1px;
+}
+input[type="radio"]:checked + div {
+    background-color: yellow;
+}
+
+#Entire_Question_Container > tbody > tr:nth-child(4) > td > table > tbody > tr:nth-child(2) > td:nth-child(1) > table > tbody > tr > td > font {
+    font-size: 13px;
+    display: none;
+}
+#Entire_Question_Container {
+    max-width: 960px;
+}
+/*========  GENERAL LAYOUT ============*/
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+table#Question_Text_Container {
+    margin-top: 15px;
+}
+/* Catch All Font Size */
+font{
+    font-size: 20px;
+}
+
+/* Question Font */
+td.questionArea font {
+    font-size: 22px;
+}
+/* Choices Font */
+td.SC_Choice_Container font, td.MC_Choice_Container font {
+    font-size: 20px;
+}
+
+/* Choices Indent */
+#SC_Choice_Table {
+    padding-left: 50px;
+}
+
+#MC_Choice_Table {
+    margin-top: 20px;
+}
+
+#leftGutterArea {
+    display: none;
+}
+
+.SC_Left_Of_Button {
+    display: none;
+}
+button#buttonNEXT, button#buttonPREV {
+    /* margin-top: 50px; */
+    font-family: arial;
+    border-style: none;
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #ffffff;
+    cursor: pointer;
+    background: #00addc;
+}
+#divNextButton {
+    text-align: center;
+}
+
+button#buttonNEXT:hover, button#buttonPREV:hover {
+    background: #087f9f;
+    transition: background 1s;
+}
+
+/* Center Logo */
+body > form > div > div:nth-child(1) > div > header_section > table {
+    width: 100%;
+}  
+/* Choice Borders */
+input[type="radio"] + span > table > tbody > tr > td:nth-child(1) {
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    border-radius: 3px;
+    text-align: center;
+}
+/* Hide text "Go to" in review mode to jump to another question, it doesn't look good. */
+td#Review_Mode_Label_Container font {
+    display: none;
+}
+#Entire_Question_Container > tbody > tr:nth-child(3) > td > table > tbody > tr > td:nth-child(1) {
+    display: none;
+}
+
+/*============== CUSTOM RATING QUESTION ==============*/
+
+/* Space around grid */
+table#Custom_Rating_Grid_Container {
+    margin: 25px;
+}
+
+/* Choices */
+td[class^="crChoice"] {
+    padding: 20px;
+}
+
+td[class^="crChoice"] font {
+    font-size: 15px;
+}
+
+/* Ranges */
+
+td[class^="crRange"] {
+    padding-top: 10px;
+}
+
+td[class^="crRange"] font {
+    font-size: 18px;
+}
+
+/* Radio buttons */
+/* input[type="radio"] {
+    border-style: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+} */
+
+/* input[type="radio"]:checked:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #15f4ff;
+    border-radius: 50%;
+    top: 49%;
+    left: 49%;
+    transform: translate(-50%,-50%);
+} */
+
+/* Missing Field in Custom Rating */
+.error {
+    background: rgba(255, 0, 0, 0.5) !important;
+}
+
+/*============= DROP DOWN MENUS ================*/
+select {
+    margin: 30px;
+    border-style: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 150px;
+    min-height: 30px;
+    background: rgba(234, 234, 234, 0.5);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*========== ALL INPUTS IE(SUM TOTALS ETC) ========================*/
+input[type="text"]{
+    border-style: none;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    min-height: 30px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Clear Styles for Other Probes because it is too big */
+input[name^="txtOE"] {
+    padding: 0;
+    min-width: 0;
+    min-height: 35px;
+}
+
+/*================== TEXT BOX ====================*/
+textarea {
+    margin-top: 25px;
+    width: 80%;
+    font-size: 15px;
+    border-style: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 1px 5px 25px #CCC;
+}
+
+
+/* -------------------------------------------------------------------*/
+
+/*  Align the overlay for CheckBox Inputs ADJUST COLOR*/
+
+input[type="CheckBox"]:checked + span > table > tbody > tr > td {
+    position: relative;
+}
+
+input[type="CheckBox"]:checked + span > table > tbody > tr > td:nth-child(1):before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(27, 191, 243, 0.34);
+    padding: 1px 1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+table#SC_Choice_Table label, table#SC_Choice_Table span, td.MC_Choice_Container label, td.MC_Choice_Container span {
+    padding: 0;
+    text-align: center;
+}
+
+/* Name / Address Label */
+td.Name_Address_Label font {
+    float: right;
+    padding-right: 10px;
+}
+
+/* Ease bottom bar */
+div#bottomBar {
+    width: 100%;
+    height: 51px;
+    background: #00addc;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+}
+
+#bottomBar img {
+    margin: -5px 45px;
+}
+
+td#Footer_TD font {
+    font-size: 10px;
+}
+
+#footer font{
+    font-size: 10px;
+}
+
+table#Question_And_Choices_Container {
+    margin-top: 20px;
+}
+
+table#Question_Text_Container {
+    padding-bottom: 20px;
+}
+
+div#privacy {
+    margin: -17px auto;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*============= MEDIA QUERIES ============*/
+@media only screen and (max-width: 800px) {
+    /* Mobile */
+    div[class^="questionContainer"]:nth-child(odd) {
+        background-color: #ffffff;
+        overflow: auto;
+    }
+    div[class^="questionContainer"] {
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-top: 25px;
+        padding: 0;
+    }
+    .choicesDiv {
+        margin: 0 5%;
+        padding-top: 6px;
+    }
+    .questionText {
+        color: #000000;
+        text-align: center;
+        padding: 5px 0;
+        background-color: #eaeaea;
+        border-radius: 5px 5px 0 0;
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    div[class^="questionResponse"] {
+        display: block;
+    }
+    input[type="radio"] {
+        display: none;
+    }
+    .rangeContainer {
+        display: none;
+    }
+    .textContainer {
+        display: block;
+    }
+    /* Less Margin between Question Text and Logo */
+    table#Question_And_Choices_Container {
+        margin-top: 15px;
+    }
+    label {
+        display: block;
+        width: inherit;
+    }
+    .hide {
+        height: 0;
+        overflow: hidden;
+        transition: height .5s ease-out;
+    }
+    .show {
+        height: 170px;
+        overflow: hidden;
+        transition: height .5s ease-out;
+    }
+    .error > .questionText {
+        background: rgba(255, 0, 0, 0.5);
+    }
+    .error > div[class^="questionResponse"] {
+        background: rgba(255, 0, 0, 0.5);
+    }
+
+    .error {
+        background-color: #ffffff;
+    }
+
+    table#Question_Text_Container {
+        width: 100%;
+        padding: 0 3px;;
+    }
+    #leftGutterArea {
+        display: none;
+    }
+    table#Question_Text_Container font {
+        font-size: 18px;
+    }
+
+    td.MC_Choice_Container font {
+        font-size: 17px;
+    }
+
+    table#SC_Choice_Table font {
+        font-size: 17px;
+    }
+    table#Left_Gutter_Table, table#MC_Left_Gutter_Table, td.MC_Choice_Container, #MC_Choice_Table {
+        width: 100%;
+    }
+
+    #Question_And_Choices_Container > tbody > tr:nth-child(2) > td > table:nth-child(4) > tbody > tr > td > font {
+        margin-left: 50px !important;
+    }
+
+    table#SC_Choice_Table {
+        padding-left: 0px !important;
+        width: 100%;
+    }    
+
+    td.instructionArea font {
+        font-size: 17px ;
+    }
+    #Footer_TD > font {
+        font-size: 8px !important;
+    }
+    #Name_Address_Grid {
+        width: 100% !important;
+    }
+    input[type="text"] {
+        min-width: 100px;
+        margin: 1px;
+        font-size: 16px;
+        padding: 2px;
+    }
+    #Question_And_Choices_Container > tbody > tr:nth-child(3) > td > table {
+        width: 100%;
+    }
+    textarea {
+        width: 100%;
+    }
+    #Name_Address_Container {
+        width: 100%;
+    }
+    button#buttonNEXT, button#buttonPREV {
+        font-family: arial;
+        border-style: none;
+        height: 35px;
+        width: 80px;
+        margin: 6px;
+        border-radius: 5px;
+        font-size: 17px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        background: #00addc;
+        margin-top: 30px;
+    }
+    /* Hide unused fields in the button td */
+    #Entire_Question_Container > tbody > tr:nth-child(3) > td > table > tbody > tr > td:nth-child(1) {
+        display: none;
+    }
+    #Review_Mode_Container, #Cancel_Button_Container, #Done_Preview_Container {
+        display: none;
+    }
+}
+@media only screen and (max-height: 500px) {
+    body > form > div > div:nth-child(1) > div > header_section > table > tbody > tr > td > img {
+        display: none;
+    }
+}
